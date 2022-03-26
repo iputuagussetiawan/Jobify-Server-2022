@@ -3,7 +3,8 @@ import connectDB from './db/connect.js';
 import notFoundMiddleware from "./middleware/not-found.js";
 import errorHandlerMiddleware from "./middleware/error-handler.js";
 import dotenv from 'dotenv'
-import AuthRouter from "./routes/authRoutes";
+import authRouter from "./routes/authRoutes.js";
+import jobsRouter from "./routes/jobsRoutes.js";
 
 dotenv.config()
 const app = express();
@@ -15,7 +16,8 @@ app.get("/", (req, res) => {
 	res.send("Welcome!");
 });
 
-app.use('/api/v1/auth',AuthRouter);
+app.use('/api/v1/auth',authRouter);
+app.use('/api/v1/jobs',jobsRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
