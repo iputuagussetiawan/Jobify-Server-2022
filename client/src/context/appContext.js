@@ -263,12 +263,11 @@ const AppProvider = ({ children }) => {
 			await authFetch.delete(`/jobs/${jobId}`)
 			getJobs()
 		} catch (error) {
+			console.log(error.response)
 			logoutUser()
 		}
 	}
 
-	
-	  
 	return (
 		<AppContext.Provider
 			value={{

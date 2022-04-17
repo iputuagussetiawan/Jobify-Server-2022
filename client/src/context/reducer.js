@@ -177,6 +177,10 @@ const reducer=(state,action)=>{
 		}
 	}
 
+	if (action.type === DELETE_JOB_BEGIN) {
+		return { ...state, isLoading: true }
+	}
+
 	if (action.type === SET_EDIT_JOB) {
 		const job = state.jobs.find((job) => job._id === action.payload.id)
 		const { _id, position, company, jobLocation, jobType, status } = job
