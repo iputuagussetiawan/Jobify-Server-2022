@@ -118,14 +118,6 @@ const AppProvider = ({ children }) => {
 		removeUserFromLocalStorage()
 	}
 
-	// const updateUser = async (currentUser) => {
-	// 	try {
-	// 		const { data } = await authFetch.patch("/auth/updateUser", currentUser);
-	// 	} catch (error) {
-	// 		console.log(error.response);
-	// 	}
-	// }
-
 	const updateUser = async (currentUser) => {
 		dispatch({ type: UPDATE_USER_BEGIN });
 		try {
