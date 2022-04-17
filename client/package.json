@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://training-jobify-ags.herokuapp.com/"
+  "proxy":"http://localhost:5000"
 }
