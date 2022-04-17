@@ -217,6 +217,7 @@ const AppProvider = ({ children }) => {
 			})
 		} catch (error) {
 			console.log(error.response)
+			logoutUser()
 		}
 		clearAlert()
 	}
@@ -226,7 +227,7 @@ const AppProvider = ({ children }) => {
 	return (
 		<AppContext.Provider
 			value={{
-				...state,displayAlert, setupUser,toggleSidebar,logoutUser,updateUser,handleChange,clearValues,createJob
+				...state,displayAlert, setupUser,toggleSidebar,logoutUser,updateUser,handleChange,clearValues,createJob,getJobs
 			}}
 		>
 			{children}
